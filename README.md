@@ -1,5 +1,5 @@
 # HospitalIS
-Example of HospitalIS
+Example of Hospital Information System
 
 WPF application using MVVM desing partern
 
