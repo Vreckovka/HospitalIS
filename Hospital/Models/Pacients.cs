@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using System.Xml.Serialization;
 using PropertyChanged;
 
-namespace Hospital.Models
+namespace HospitalIS.Models
 {
     [AddINotifyPropertyChangedInterface]
     [XmlRoot("Pacients")]

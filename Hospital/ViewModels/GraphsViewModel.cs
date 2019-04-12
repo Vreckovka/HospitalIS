@@ -4,15 +4,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Controls;
-using Hospital.Models;
-using Hospital.ViewModels.Commands;
-using Hospital.ViewModels.GraphsViewModels;
-using Hospital.Views;
+using HospitalIS.Models;
+using HospitalIS.ViewModels.Commands;
+using HospitalIS.ViewModels.GraphsViewModels;
+using HospitalIS.Views;
 using LiveCharts;
 using LiveCharts.Wpf;
 
 
-namespace Hospital.ViewModels
+namespace HospitalIS.ViewModels
 {
     public class GraphsViewModel : BaseViewModel
     {

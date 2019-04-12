@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Hospital.ViewModels.Commands;
+using HospitalIS.ViewModels.Commands;
 using LiveCharts;
 
-namespace Hospital.ViewModels.GraphsViewModels
+namespace HospitalIS.ViewModels.GraphsViewModels
 {
    public abstract class BaseGraphViewModel : BaseViewModel
     {

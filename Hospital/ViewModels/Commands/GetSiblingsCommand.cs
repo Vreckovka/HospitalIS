@@ -4,10 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
-using Hospital.Models;
-using Hospital.Other;
+using HospitalIS.Models;
+using HospitalIS.Other;
 
-namespace Hospital.ViewModels.Commands
+namespace HospitalIS.ViewModels.Commands
 {
     public class GetSiblingsCommand : BaseCommand
     {

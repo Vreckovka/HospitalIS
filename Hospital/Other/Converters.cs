@@ -10,9 +10,9 @@ using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows.Markup;
 using System.Windows.Media.Imaging;
-using Hospital.Models;
+using HospitalIS.Models;
 
-namespace Hospital.Other
+namespace HospitalIS.Other
 {
 
     public class BirthDateFormater : MarkupExtension, IValueConverter

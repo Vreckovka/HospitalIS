@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Hospital.ViewModels.StatisticsVIewModels
+namespace HospitalIS.ViewModels.StatisticsVIewModels
 {
     public abstract class BaseStatisticsViewModel : BaseViewModel
     {

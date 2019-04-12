@@ -12,10 +12,10 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using Hospital.ViewModels.StatisticsVIewModels;
+using HospitalIS.ViewModels.StatisticsVIewModels;
 
 
-namespace Hospital.Views.StatisticsPages
+namespace HospitalIS.Views.StatisticsPages
 {
     /// <summary>
     /// Interaction logic for AvrageHeightStatistics.xaml

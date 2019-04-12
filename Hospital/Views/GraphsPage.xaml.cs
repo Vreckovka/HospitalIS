@@ -13,9 +13,9 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using Hospital.ViewModels;
+using HospitalIS.ViewModels;
 
-namespace Hospital.Views
+namespace HospitalIS.Views
 {
     /// <summary>
     /// Interaction logic for GraphsPage.xaml

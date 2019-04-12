@@ -12,11 +12,11 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using Hospital.Other;
-using Hospital.ViewModels;
-using Hospital.Views;
+using HospitalIS.Other;
+using HospitalIS.ViewModels;
+using HospitalIS.Views;
 
-namespace Hospital
+namespace HospitalIS
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml

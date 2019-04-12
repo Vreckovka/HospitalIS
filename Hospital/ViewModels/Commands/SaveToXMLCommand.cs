@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
-using Hospital.Models;
+using HospitalIS.Models;
 
-namespace Hospital.ViewModels.Commands
+namespace HospitalIS.ViewModels.Commands
 {
     public class SaveToXMLCommand : BaseCommand
     {

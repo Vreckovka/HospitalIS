@@ -5,11 +5,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Serialization;
-using Hospital.Models;
-using Hospital.ViewModels.Commands;
+using HospitalIS.Models;
+using HospitalIS.ViewModels.Commands;
 
 
-namespace Hospital.ViewModels
+namespace HospitalIS.ViewModels
 {
    
     public class PacientViewModel : BaseViewModel

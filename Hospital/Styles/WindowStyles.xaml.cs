@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 
-namespace Hospital.Styles
+namespace HospitalIS.Styles
 {
     public partial class WindowStyles
     {

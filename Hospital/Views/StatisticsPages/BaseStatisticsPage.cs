@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Controls;
-using Hospital.ViewModels.StatisticsVIewModels;
+using HospitalIS.ViewModels.StatisticsVIewModels;
 
-namespace Hospital.Views.StatisticsPages
+namespace HospitalIS.Views.StatisticsPages
 {
     public class BaseStatisticsPage : Page
     {

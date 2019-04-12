@@ -5,9 +5,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Serialization;
-using Hospital.Models;
+using HospitalIS.Models;
 
-namespace Hospital.Other
+namespace HospitalIS.Other
 {
     public class PacientGenerator
     {

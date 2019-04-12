@@ -5,9 +5,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Controls;
 using System.Windows.Input;
-using Hospital.ViewModels.GraphsViewModels;
+using HospitalIS.ViewModels.GraphsViewModels;
 
-namespace Hospital.ViewModels.Commands
+namespace HospitalIS.ViewModels.Commands
 {
    public class SwitchGraphCommand : BaseCommand
     {

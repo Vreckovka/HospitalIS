@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Serialization;
 
-namespace Hospital.Models
+namespace HospitalIS.Models
 {
     public static class LoadedPacients
     {

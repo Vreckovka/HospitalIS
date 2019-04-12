@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using PropertyChanged;
 
-namespace Hospital.ViewModels
+namespace HospitalIS.ViewModels
 {
     [AddINotifyPropertyChangedInterface]
     public class BaseViewModel

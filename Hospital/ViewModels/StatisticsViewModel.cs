@@ -4,12 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Controls;
-using Hospital.ViewModels.Commands;
-using Hospital.ViewModels.StatisticsVIewModels;
-using Hospital.Views;
-using Hospital.Views.StatisticsPages;
+using HospitalIS.ViewModels.Commands;
+using HospitalIS.ViewModels.StatisticsVIewModels;
+using HospitalIS.Views;
+using HospitalIS.Views.StatisticsPages;
 
-namespace Hospital.ViewModels
+namespace HospitalIS.ViewModels
 {
     public class StatisticsViewModel : BaseViewModel
     {

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Hospital.Other
+namespace HospitalIS.Other
 {
     public static class StaticExtensions
     {

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using System.Windows.Controls;
 using System.Windows.Input;
 
-namespace Hospital.ViewModels.Commands
+namespace HospitalIS.ViewModels.Commands
 {
     public class SwitchStatisticsCommand : BaseCommand
     {

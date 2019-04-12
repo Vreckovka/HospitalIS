@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
 
-namespace Hospital.ViewModels.Commands
+namespace HospitalIS.ViewModels.Commands
 {
     class StatisticsLoadedCommand : BaseCommand
     {

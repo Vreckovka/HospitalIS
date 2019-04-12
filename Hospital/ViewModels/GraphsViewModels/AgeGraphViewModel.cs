@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Hospital.Models;
+using HospitalIS.Models;
 
-namespace Hospital.ViewModels.GraphsViewModels
+namespace HospitalIS.ViewModels.GraphsViewModels
 {
     public class AgeGraphViewModel : BaseGraphViewModel
     {

@@ -5,11 +5,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using Hospital.Models;
-using Hospital.ViewModels.Commands;
-using Hospital.Views;
+using HospitalIS.Models;
+using HospitalIS.ViewModels.Commands;
+using HospitalIS.Views;
 
-namespace Hospital.ViewModels
+namespace HospitalIS.ViewModels
 {
     public class MainWindowViewModel : BaseViewModel
     {
