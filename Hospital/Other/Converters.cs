@@ -39,17 +39,6 @@ namespace HospitalIS.Other
     {
         public object Convert(object value, Type targetType, object parameter, System.Globalization.CultureInfo culture)
         {
-            //if (value != null)
-            //{
-            //    BitmapImage image = new BitmapImage();
-
-            //    image.BeginInit();
-            //    image.CacheOption = BitmapCacheOption.OnLoad;
-            //    image.UriSource = new Uri((value.ToString()), UriKind.Absolute);
-            //    image.DecodePixelWidth = 1920; // should be enough, but you can experiment
-            //    image.EndInit();
-            //    return image;
-            //}
             if (value is System.Windows.Shapes.Path)
                 return ((System.Windows.Shapes.Path)value).Data;
 

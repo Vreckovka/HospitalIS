@@ -21,6 +21,7 @@ namespace HospitalIS.Models
 
         public int Age
         {
+            //365.242199 avrage lenght of years in gregorian calendar
             get { return (int) ((DateTime.Today - BirthDate).TotalDays / 365.242199); }
         }
 
