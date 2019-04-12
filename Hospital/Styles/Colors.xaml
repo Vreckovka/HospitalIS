@@ -1,0 +1,27 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    >
+
+    <Color x:Key="DefaultBlueColor" R="40" G="49" B="85" A="255"/>
+    <Color x:Key="FontColor" R="184" G="206" B="235" A="255"/>
+    <Color x:Key="GreenColor" R="111" G="223" B="107" A="255"/>
+
+
+    <SolidColorBrush x:Key="DefaultBlueBrush" Color="{DynamicResource DefaultBlueColor}"/>
+    <SolidColorBrush x:Key="DefaultFontBrush" Color="{DynamicResource FontColor}"/>
+    <SolidColorBrush x:Key="BackgroundBrush" >#f8f8f8</SolidColorBrush>
+    <SolidColorBrush x:Key="GreenColorBrush"  Color="{DynamicResource GreenColor}"/>
+
+    <!--<LinearGradientBrush x:Key="BackgroudBrush" StartPoint="0,0" EndPoint="0,3">
+        <GradientStop Color="{DynamicResource BackgroudColor}" 
+                      Offset="0.23" />
+        <GradientStop Color="{DynamicResource BackgroudColor2}" Offset="0.5" />
+    </LinearGradientBrush>
+
+    <LinearGradientBrush x:Key="BackgroudPageBrush" StartPoint="0,0" EndPoint="0,3">
+        <GradientStop Color="{DynamicResource BackgroudColor}" 
+                      Offset="0.23" />
+        <GradientStop Color="{DynamicResource BackgroudColor2}" Offset="0.8" />
+    </LinearGradientBrush>-->
+
+</ResourceDictionary>
