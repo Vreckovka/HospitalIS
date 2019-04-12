@@ -1,7 +1,7 @@
 # HospitalIS
 Example of HospitalIS
 
-Using MVVM desing partern
+WPF application using MVVM desing partern
 
 Used NuGets:
 https://github.com/Fody/PropertyChanged
