@@ -1,14 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Input;
-using HospitalIS.Models;
+﻿using System.Windows.Input;
+using HospitalIS.Core.Models;
+using HospitalIS.Core.ViewModels;
+using HospitalIS.Core.ViewModels.Commands;
 using HospitalIS.ViewModels.Commands;
-using HospitalIS.Views;
 
 namespace HospitalIS.ViewModels
 {

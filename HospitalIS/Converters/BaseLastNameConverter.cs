@@ -7,8 +7,8 @@ using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Data;
 using System.Windows.Markup;
-using HospitalIS.Models;
-using HospitalIS.Other;
+using HospitalIS.Core.Models;
+using HospitalIS.Core.Other;
 
 namespace HospitalIS.Converters
 {

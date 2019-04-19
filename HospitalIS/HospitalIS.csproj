@@ -7,8 +7,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{7183796C-DFAC-47B8-8273-64656B6AC750}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>Hospital</RootNamespace>
-    <AssemblyName>Hospital</AssemblyName>
+    <RootNamespace>HospitalIS</RootNamespace>
+    <AssemblyName>HospitalIS</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -100,46 +100,22 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Attributes\IconStyleKey.cs" />
     <Compile Include="BindingSourceExtension\EnumBindingSourceExtension.cs" />
     <Compile Include="Converters\ApplicationPageConverter.cs" />
     <Compile Include="Converters\BaseLastNameConverter.cs" />
     <Compile Include="Converters\BirthDateConverter.cs" />
     <Compile Include="Converters\IconPathConverter.cs" />
     <Compile Include="Converters\SiblingsDataConverter.cs" />
-    <Compile Include="DataContexts\IDataContext.cs" />
-    <Compile Include="DataContexts\XmlContext.cs" />
-    <Compile Include="Models\ApplicationPage.cs" />
-    <Compile Include="Models\Pacients.cs" />
-    <Compile Include="Other\PacientGenerator.cs" />
-    <Compile Include="Other\StaticExtensions.cs" />
     <Compile Include="Styles\WindowStyles.xaml.cs">
       <DependentUpon>WindowStyles.xaml</DependentUpon>
     </Compile>
     <Compile Include="UserControls\MenuItemWithIcon.xaml.cs">
       <DependentUpon>MenuItemWithIcon.xaml</DependentUpon>
     </Compile>
-    <Compile Include="ViewModels\Commands\RelayParametrizedCommand.cs" />
-    <Compile Include="ViewModels\Commands\UnSelectAllCommand.cs" />
-    <Compile Include="ViewModels\Commands\RelayParametlessCommand.cs" />
-    <Compile Include="ViewModels\StatisticsViewModel.cs" />
-    <Compile Include="ViewModels\BaseViewModel.cs" />
-    <Compile Include="ViewModels\Commands\CommandWithViewModel.cs" />
-    <Compile Include="ViewModels\Commands\GetSiblingsCommand.cs" />
-    <Compile Include="ViewModels\Commands\StatisticsLoadedCommand.cs" />
-    <Compile Include="ViewModels\Commands\SwitchGraphCommand.cs" />
     <Compile Include="ViewModels\Commands\SwitchPageCommand.cs" />
-    <Compile Include="ViewModels\Commands\SwitchStatisticsCommand.cs" />
-    <Compile Include="ViewModels\GraphsViewModel.cs" />
-    <Compile Include="ViewModels\GraphsViewModels\AgeGraphViewModel.cs" />
-    <Compile Include="ViewModels\GraphsViewModels\BaseGraphViewModel.cs" />
-    <Compile Include="ViewModels\GraphsViewModels\HeightGraphViewModel.cs" />
-    <Compile Include="ViewModels\GraphsViewModels\WeightGraphViewModel.cs" />
+    <Compile Include="ViewModels\Commands\UnSelectAllCommand.cs" />
     <Compile Include="ViewModels\MainWindowViewModel.cs" />
-    <Compile Include="ViewModels\PacientViewModel.cs" />
-    <Compile Include="ViewModels\StatisticsVIewModels\AvrageHeightStatisticsViewModel.cs" />
     <Compile Include="Views\StatisticsPages\BaseStatisticsPage.cs" />
-    <Compile Include="ViewModels\StatisticsVIewModels\BaseStatisticsViewModel.cs" />
     <Compile Include="Views\GraphsPage.xaml.cs">
       <DependentUpon>GraphsPage.xaml</DependentUpon>
     </Compile>
@@ -226,7 +202,6 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Models\Pacient.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -270,6 +245,12 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\datas\pacients.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\HospitalIS.Core\HospitalIS.Core.csproj">
+      <Project>{ad65510e-5ccb-4c21-9175-c59030b177db}</Project>
+      <Name>HospitalIS.Core</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\Fody.4.2.1\build\Fody.targets" Condition="Exists('..\packages\Fody.4.2.1\build\Fody.targets')" />

@@ -5,6 +5,7 @@ using System.Data;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
+using HospitalIS.Core.IoC;
 
 namespace HospitalIS
 {
@@ -13,5 +14,20 @@ namespace HospitalIS
     /// </summary>
     public partial class App : Application
     {
+        /// <summary>
+        /// Custom startup to load IoC 
+        /// </summary>
+        /// <param name="e"></param>
+        protected override void OnStartup(StartupEventArgs e)
+        {
+            base.OnStartup(e);
+
+            //Setup IoC
+            IoC.Configure();
+
+            //Show main window
+            Current.MainWindow = new MainWindow();
+            Current.MainWindow.Show();
+        }
     }
 }

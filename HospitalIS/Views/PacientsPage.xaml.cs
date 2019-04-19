@@ -12,7 +12,11 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using HospitalIS.Core.IoC;
+using HospitalIS.Core.ViewModels;
+using HospitalIS.DataContexts;
 using HospitalIS.ViewModels;
+using Autofac;
 
 namespace HospitalIS.Views
 {
@@ -25,7 +29,8 @@ namespace HospitalIS.Views
         public PacientsPage()
         {
             InitializeComponent();
-            PacientViewModel = new PacientViewModel();
+
+            PacientViewModel = new PacientViewModel(IoC.Container.Resolve<IDataContext>());
             DataContext = PacientViewModel;
         }
     }

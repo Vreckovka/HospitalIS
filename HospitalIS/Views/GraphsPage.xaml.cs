@@ -26,18 +26,17 @@ namespace HospitalIS.Views
         public GraphsPage()
         {
             InitializeComponent();
-            GraphsViewModel = new GraphsViewModel(Chart);
-
+            GraphsViewModel = new GraphsViewModel();
             DataContext = GraphsViewModel;
         }
 
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
-            if (ListViewPageControl.Items.Count > 0 && ListViewPageControl.SelectedItem == null)
-            {
-                GraphsViewModel.SwitchGraphCommandWithViewModel.Execute(ListViewPageControl.Items[0]);
-                ((ListViewItem)ListViewPageControl.Items[0]).IsSelected = true;
-            }
+            //if (ListViewPageControl.Items.Count > 0 && ListViewPageControl.SelectedItem == null)
+            //{
+            //    GraphsViewModel.SwitchGraphCommandWithViewModel.Execute(ListViewPageControl.Items[0]);
+            //    ((ListViewItem)ListViewPageControl.Items[0]).IsSelected = true;
+            //}
         }
     }
 }

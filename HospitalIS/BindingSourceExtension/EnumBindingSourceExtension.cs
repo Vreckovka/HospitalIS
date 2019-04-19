@@ -8,8 +8,8 @@ using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Markup;
 using System.Windows.Shapes;
-using HospitalIS.Attributes;
-using HospitalIS.Models;
+using HospitalIS.Core.Attributes;
+using HospitalIS.Core.Models;
 using HospitalIS.UserControls;
 
 namespace HospitalIS.BindingSourceExtension

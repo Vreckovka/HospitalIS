@@ -9,7 +9,7 @@
         xmlns:System="clr-namespace:System;assembly=mscorlib"
         xmlns:userControls="clr-namespace:HospitalIS.UserControls"
         xmlns:bidingExtention="clr-namespace:HospitalIS.BindingSourceExtension"
-        xmlns:models="clr-namespace:HospitalIS.Models"
+        xmlns:models="clr-namespace:HospitalIS.Core.Models;assembly=HospitalIS.Core"
         mc:Ignorable="d"
         Title="Hospital IS" 
         Height="600" 

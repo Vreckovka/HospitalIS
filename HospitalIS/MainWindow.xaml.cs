@@ -12,8 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using Hospital.DataContexts;
-using HospitalIS.Other;
+using HospitalIS.Core.ViewModels;
 using HospitalIS.ViewModels;
 using HospitalIS.Views;
 

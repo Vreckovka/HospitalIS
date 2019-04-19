@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Data;
 using System.Windows.Markup;
-using HospitalIS.Models;
+using HospitalIS.Core.Models;
 using HospitalIS.Views;
 
 namespace HospitalIS.Converters
