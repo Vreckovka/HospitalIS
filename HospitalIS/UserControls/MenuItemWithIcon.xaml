@@ -1,0 +1,33 @@
+﻿<UserControl x:Class="HospitalIS.UserControls.MenuItemWithIcon"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:HospitalIS.UserControls"
+             mc:Ignorable="d" 
+             d:DesignHeight="100" d:DesignWidth="100" Background="Transparent">
+
+
+    <Grid HorizontalAlignment="Left" >
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <Path Data="{Binding Icon.Data, RelativeSource={RelativeSource AncestorType=local:MenuItemWithIcon, Mode=FindAncestor}}"
+              Fill="{Binding IconColor, RelativeSource={RelativeSource AncestorType=local:MenuItemWithIcon, Mode=FindAncestor}}" 
+              Width="17" 
+              Height="17" 
+              Stretch="Fill" 
+              Margin="0,5,5,5"
+              SnapsToDevicePixels="true"
+              HorizontalAlignment="Left" 
+              VerticalAlignment="Top"/>
+
+        <TextBlock Text="{Binding Text, RelativeSource={RelativeSource AncestorType=local:MenuItemWithIcon, Mode=FindAncestor}}"
+                   Grid.Column="1" 
+                   TextTrimming="CharacterEllipsis"
+                   HorizontalAlignment="Right"
+                   VerticalAlignment="Top"/>
+    </Grid>
+</UserControl>
