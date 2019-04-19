@@ -17,7 +17,6 @@
         MinHeight="400"
         MinWidth="800"
         WindowStartupLocation="CenterScreen" 
-        Loaded="Window_Loaded"  
         Style="{StaticResource {x:Type Window}}"
         Icon="/Resources/icons/hospital.ico" >
 

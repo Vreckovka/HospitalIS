@@ -58,8 +58,8 @@
                 <DataGridTextColumn Header="PID" Binding="{Binding PID}" Width="*"/>
                 <DataGridTextColumn Header="First name" Binding="{Binding FirstName}"  Width="*"/>
                 <DataGridTextColumn Header="Last name" Binding="{Binding LastName}"  Width="*"/>
-                <DataGridTextColumn Header="Height (cm)" Binding="{Binding Height, StringFormat={}{0:N2}}"  Width="*"/>
-                <DataGridTextColumn Header="Weight (kg)" Binding="{Binding Weight, StringFormat={}{0:N2}}"  Width="*"/>
+                <DataGridTextColumn Header="Height (cm)" Binding="{Binding Height, StringFormat={}{0:N3}}"  Width="*"/>
+                <DataGridTextColumn Header="Weight (kg)" Binding="{Binding Weight, StringFormat={}{0:N3}}"  Width="*"/>
             </DataGrid.Columns>
         </DataGrid>
     </DataTemplate>

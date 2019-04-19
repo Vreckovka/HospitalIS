@@ -30,7 +30,7 @@ namespace HospitalIS.Converters
                     case ApplicationPages.Statistics:
                         return new StatisticsPage();
                     default:
-                        throw new ArgumentOutOfRangeException(nameof(value), value, null);
+                        return null;
                 }
 
             return null;

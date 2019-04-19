@@ -12,7 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using HospitalIS.ViewModels.StatisticsVIewModels;
+using HospitalIS.Core.ViewModels.StatisticsVIewModels;
 
 
 namespace HospitalIS.Views.StatisticsPages
@@ -20,13 +20,12 @@ namespace HospitalIS.Views.StatisticsPages
     /// <summary>
     /// Interaction logic for AvrageHeightStatistics.xaml
     /// </summary>
-    public partial class AvrageHeightStatisticsPage : BaseStatisticsPage
+    public partial class HeavierPeopleStatisticsPage
     {
-        public AvrageHeightStatisticsPage()
+        public HeavierPeopleStatisticsPage()
         {
             InitializeComponent();
-            BaseStatisticsViewModel = new AvrageHeightStatisticsViewModel();
-            DataContext = BaseStatisticsViewModel;
+            DataContext = new AvrageHeightStatisticsViewModel();
         }
     }
 }

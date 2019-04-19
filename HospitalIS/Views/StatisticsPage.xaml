@@ -5,6 +5,9 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:HospitalIS.Views"
       xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+      xmlns:bindingSourceExtension="clr-namespace:HospitalIS.BindingSourceExtension"
+      xmlns:models="clr-namespace:HospitalIS.Core.Models;assembly=HospitalIS.Core"
+      xmlns:converters="clr-namespace:HospitalIS.Converters"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
       Title="StatisticGraphPage" >
@@ -14,20 +17,25 @@
             <ColumnDefinition Width="auto"/>
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
-        <ListView Name="ListViewPageControl" Style="{StaticResource ListView_MenuStyle}" 
-                  ItemContainerStyle="{StaticResource ListViewItem_MenuStyleWithoutIcon}">
-            <i:Interaction.Triggers>
-                <i:EventTrigger EventName="SelectionChanged">
-                    <i:InvokeCommandAction Command="{Binding SwitchStatisticsCommand}" 
-                                           CommandParameter="{Binding ElementName=ListViewPageControl, 
-                                           Path=SelectedItem}">
-                    </i:InvokeCommandAction>
-                </i:EventTrigger>
-            </i:Interaction.Triggers>
+        <ListView Style="{StaticResource ListView_MenuStyle}" 
+                  ItemContainerStyle="{StaticResource ListViewItem_MenuStyleWithoutIcon}"
+                  ItemsSource="{Binding Source={bindingSourceExtension:EnumBindingSourceExtensionWithoutIcon 
+                  {x:Type models:StatisticsPages}}}">
 
-            <ListViewItem Content="Heavier people&#x0a;then avrage" />
+        <i:Interaction.Triggers>
+            <i:EventTrigger EventName="SelectionChanged">
+                <i:InvokeCommandAction Command="{Binding SwitchGraphCommand}" 
+                                       CommandParameter="{Binding RelativeSource={RelativeSource AncestorType=ListView, Mode=FindAncestor},
+                                           Path=SelectedItem}">
+                </i:InvokeCommandAction>
+
+            </i:EventTrigger>
+        </i:Interaction.Triggers>
         </ListView>
 
-        <Frame Name="FrameStatistics" Content="{Binding DisplayedPage}" Grid.Column="1"/>
+        <Frame Name="FrameStatistics" 
+               Content="{Binding DisplayedPage, 
+               Converter={converters:StatisticsPageConverter}}"  
+               Grid.Column="1"/>
     </Grid>
 </Page>

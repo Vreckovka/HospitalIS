@@ -32,8 +32,6 @@ namespace HospitalIS.ViewModels.Commands
                     case ApplicationPages.Statistics:
                         ((MainWindowViewModel) BaseViewModel).DisplayedPage = ApplicationPages.Statistics;
                         break;
-                    default:
-                        throw new ArgumentOutOfRangeException(nameof(parameter), parameter, null);
                 }
             }
         }

@@ -58,12 +58,14 @@
     <Compile Include="Converters\EnumDescriptionConverter.cs" />
     <Compile Include="DataContexts\DataContext.cs" />
     <Compile Include="DataContexts\IDataContext.cs" />
+    <Compile Include="DataContexts\TestContext.cs" />
     <Compile Include="DataContexts\XmlContext.cs" />
     <Compile Include="IoC\IoC.cs" />
     <Compile Include="Models\ApplicationPages.cs" />
     <Compile Include="Models\GraphPages.cs" />
     <Compile Include="Models\Pacient.cs" />
     <Compile Include="Models\Pacients.cs" />
+    <Compile Include="Models\StatisticsPages.cs" />
     <Compile Include="Other\PacientGenerator.cs" />
     <Compile Include="Other\StaticExtensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -72,11 +74,9 @@
     <Compile Include="ViewModels\Commands\GetSiblingsCommand.cs" />
     <Compile Include="ViewModels\Commands\RelayParametlessCommand.cs" />
     <Compile Include="ViewModels\Commands\RelayParametrizedCommand.cs" />
-    <Compile Include="ViewModels\GraphsViewModels\BaseGraphViewModel.cs" />
+    <Compile Include="ViewModels\GraphViewModel.cs" />
     <Compile Include="ViewModels\PacientViewModel.cs" />
-    <Compile Include="ViewModels\StatisticsViewModel.cs" />
     <Compile Include="ViewModels\StatisticsVIewModels\AvrageHeightStatisticsViewModel.cs" />
-    <Compile Include="ViewModels\StatisticsVIewModels\BaseStatisticsViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

@@ -13,9 +13,6 @@ namespace HospitalIS.Core.Models
         Graphs,
         [IconStyleKey("StatisticsIcon")]
         [Description("Statistics")]
-        Statistics,
+        Statistics
     }
-
-    
-
 }

@@ -12,7 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using HospitalIS.Core.ViewModels.GraphsViewModels;
+using HospitalIS.Core.ViewModels;
 
 namespace HospitalIS.Views.GraphPages
 {
@@ -24,7 +24,7 @@ namespace HospitalIS.Views.GraphPages
         public GraphPage(int labelCout, string xAxisTitle,int gap, int minValue, string propName)
         {
             InitializeComponent();
-            DataContext = new BaseGraphViewModel(labelCout, xAxisTitle, gap, minValue, propName);
+            DataContext = new GraphViewModel(labelCout, xAxisTitle, gap, minValue, propName);
         }
     }
 }

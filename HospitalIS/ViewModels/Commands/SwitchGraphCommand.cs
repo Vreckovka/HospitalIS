@@ -32,8 +32,6 @@ namespace HospitalIS.ViewModels.Commands
                     case GraphPages.Weight:
                         ((GraphsViewModel) BaseViewModel).DisplayedPage = GraphPages.Weight;
                         break;
-                    default:
-                        throw new ArgumentOutOfRangeException(nameof(parameter), parameter, null);
                 }
             }
         }

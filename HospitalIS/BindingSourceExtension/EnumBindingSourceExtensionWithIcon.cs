@@ -33,10 +33,12 @@ namespace HospitalIS.BindingSourceExtension
             
             //Gets enum type with reflection
             var type = _enumType.GetTypeInfo();
+
             foreach (Enum enumVal in Enum.GetValues(type))
             {
                 list.Add(CreateMenuItem(enumVal));
             }
+
             return list;
         }
 

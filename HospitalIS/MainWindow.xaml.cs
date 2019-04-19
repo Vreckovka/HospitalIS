@@ -33,14 +33,5 @@ namespace HospitalIS
 
             DataContext = new MainWindowViewModel();
         }
-
-        private void Window_Loaded(object sender, RoutedEventArgs e)
-        {
-            //if (ListViewPageControl.Items.Count > 0)
-            //{
-            //    MainWindowViewModel.SwitchApplicationPageCommandWithViewModel.Execute(ListViewPageControl.Items[0]);
-            //    ((ListViewItem)ListViewPageControl.Items[0]).IconColor = true;
-            //}
-        }
     }
 }

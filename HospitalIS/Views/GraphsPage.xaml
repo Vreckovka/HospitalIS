@@ -13,7 +13,9 @@
       mc:Ignorable="d" 
       d:DesignHeight="450" 
       d:DesignWidth="800"
-      Title="GraphsPage" Loaded="Page_Loaded">
+      Title="GraphsPage" 
+      Loaded="Page_Loaded"
+      >
 
     <Grid>
         <Grid.ColumnDefinitions>
@@ -45,7 +47,8 @@
             Margin="10" >
             </svgc:SvgViewbox>
 
-            <Frame Content="{Binding DisplayedPage,
+            <Frame x:Name="FramePage"
+                    Content="{Binding DisplayedPage,
                    Converter={converters:GraphPageConverter}}"
                    NavigationUIVisibility="Hidden"/>
            

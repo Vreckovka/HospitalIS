@@ -102,6 +102,7 @@
     </ApplicationDefinition>
     <Compile Include="BindingSourceExtension\EnumBindingSourceExtensionWithIcon.cs" />
     <Compile Include="BindingSourceExtension\EnumBindingSourceExtensionWithoutIcon.cs" />
+    <Compile Include="Converters\StatisticsPageConverter.cs" />
     <Compile Include="Converters\GraphPageConverter.cs" />
     <Compile Include="Converters\ApplicationPageConverter.cs" />
     <Compile Include="Converters\BaseLastNameConverter.cs" />
@@ -114,14 +115,15 @@
     <Compile Include="UserControls\MenuItemWithIcon.xaml.cs">
       <DependentUpon>MenuItemWithIcon.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ViewModels\Commands\SwitchStatisticsCommand.cs" />
     <Compile Include="ViewModels\Commands\SwitchGraphCommand.cs" />
     <Compile Include="ViewModels\Commands\SwitchApplicationPageCommand.cs" />
     <Compile Include="ViewModels\GraphsViewModel.cs" />
     <Compile Include="ViewModels\MainWindowViewModel.cs" />
+    <Compile Include="ViewModels\StatisticsViewModel.cs" />
     <Compile Include="Views\GraphPages\GraphPage.xaml.cs">
       <DependentUpon>GraphPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\StatisticsPages\BaseStatisticsPage.cs" />
     <Compile Include="Views\GraphsPage.xaml.cs">
       <DependentUpon>GraphsPage.xaml</DependentUpon>
     </Compile>
@@ -131,8 +133,8 @@
     <Compile Include="Views\StatisticsPage.xaml.cs">
       <DependentUpon>StatisticsPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\StatisticsPages\AvrageHeightStatisticsPage.xaml.cs">
-      <DependentUpon>AvrageHeightStatisticsPage.xaml</DependentUpon>
+    <Compile Include="Views\StatisticsPages\HeavierPeopleStatisticsPage.xaml.cs">
+      <DependentUpon>HeavierPeopleStatisticsPage.xaml</DependentUpon>
     </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -202,7 +204,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\StatisticsPages\AvrageHeightStatisticsPage.xaml">
+    <Page Include="Views\StatisticsPages\HeavierPeopleStatisticsPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

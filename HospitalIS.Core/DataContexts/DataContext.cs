@@ -13,5 +13,11 @@ namespace HospitalIS.Core.DataContexts
         public Pacients Pacients { get; set; }
         public abstract void Load();
         public abstract void Save();
+
+        public DataContext()
+        {
+            Pacients = new Pacients();
+            Load();
+        }
     }
 }

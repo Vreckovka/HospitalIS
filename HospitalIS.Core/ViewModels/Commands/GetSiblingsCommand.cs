@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Linq;
+using System.Threading.Tasks;
 using Autofac;
 using HospitalIS.Core.DataContexts;
 using HospitalIS.Core.Models;
@@ -24,18 +25,21 @@ namespace HospitalIS.Core.ViewModels.Commands
         {
             if (((object[])parameter)[0] is Pacient)
             {
-                Pacient pacient = (Pacient)(((object[])parameter)[0]);
-                string[] postfixes = (string[])((object[])parameter)[1];
+                Task.Run(() =>
+                {
+                    Pacient pacient = (Pacient) (((object[]) parameter)[0]);
+                    string[] postfixes = (string[]) ((object[]) parameter)[1];
 
-                var lastName = pacient.LastName.RemovePostfixes(postfixes);
+                    var lastName = pacient.LastName.RemovePostfixes(postfixes);
 
-                var pacients = IoC.IoC.Container.Resolve<DataContext>().Pacients;
+                    var pacients = IoC.IoC.Container.Resolve<DataContext>().Pacients;
 
-                ((PacientViewModel)BaseViewModel).ActualPacientSiblings = 
-                                               (from x in pacients
-                                               where x.LastName.RemovePostfixes(postfixes).GetLvenshteinDistance(lastName) <= 1
-                                               where x.PID != pacient.PID
-                                               select x).ToList();
+                    ((PacientViewModel) BaseViewModel).ActualPacientSiblings =
+                        (from x in pacients
+                            where x.LastName.RemovePostfixes(postfixes).GetLvenshteinDistance(lastName) <= 1
+                            where x.PID != pacient.PID
+                            select x).ToList();
+                });
             }
         }
 
