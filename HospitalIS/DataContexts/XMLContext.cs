@@ -9,25 +9,25 @@ using HospitalIS.Models;
 
 namespace Hospital.DataContexts
 {
-    public static class XmlContext
+    
+    public class XmlContext : IDataContext
     {
         public static Pacients Pacients { get; set; }
         public static string XmlPath { get; } = "..\\..\\pacients.xml";
-        static XmlContext()
+        public XmlContext()
         {
-            DeserializedPacients();
+            Load();
         }
 
-        public static void SerializePacients()
+        public void Save()
         {
             using (FileStream stream = new FileStream(XmlPath, FileMode.Create))
             {
                 XmlSerializer xmlSerializer = new XmlSerializer(typeof(Pacients));
                 xmlSerializer.Serialize(stream, Pacients);
-
             }
         }
-        public static void DeserializedPacients()
+        public void Load()
         {
             if (File.Exists(XmlPath))
                 using (FileStream stream = new FileStream(XmlPath, FileMode.Open))
@@ -37,8 +37,8 @@ namespace Hospital.DataContexts
                 }
             else
             {
-                SerializePacients();
-                DeserializedPacients();
+                Save();
+                Load();
             }
         }
     }

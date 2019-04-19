@@ -7,7 +7,7 @@ using System.Windows.Input;
 
 namespace HospitalIS.ViewModels.Commands
 {
-    class StatisticsLoadedCommand : BaseCommand
+    class StatisticsLoadedCommandWithViewModel : CommandWithViewModel
     {
         public override bool CanExecute(object parameter)
         {
@@ -21,7 +21,7 @@ namespace HospitalIS.ViewModels.Commands
 
         public override event EventHandler CanExecuteChanged;
 
-        public StatisticsLoadedCommand(BaseViewModel baseViewModel) : base(baseViewModel)
+        public StatisticsLoadedCommandWithViewModel(BaseViewModel baseViewModel) : base(baseViewModel)
         {
         }
     }

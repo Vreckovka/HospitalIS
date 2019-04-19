@@ -38,6 +38,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Autofac, Version=4.9.2.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
+      <HintPath>..\packages\Autofac.4.9.2\lib\net45\Autofac.dll</HintPath>
+    </Reference>
     <Reference Include="LiveCharts, Version=0.9.7.0, Culture=neutral, PublicKeyToken=0bc1f845d1ebb8df, processorArchitecture=MSIL">
       <HintPath>..\packages\LiveCharts.0.9.7\lib\net45\LiveCharts.dll</HintPath>
     </Reference>
@@ -104,6 +107,7 @@
     <Compile Include="Converters\BirthDateConverter.cs" />
     <Compile Include="Converters\IconPathConverter.cs" />
     <Compile Include="Converters\SiblingsDataConverter.cs" />
+    <Compile Include="DataContexts\IDataContext.cs" />
     <Compile Include="DataContexts\XmlContext.cs" />
     <Compile Include="Models\ApplicationPage.cs" />
     <Compile Include="Models\Pacients.cs" />
@@ -115,12 +119,13 @@
     <Compile Include="UserControls\MenuItemWithIcon.xaml.cs">
       <DependentUpon>MenuItemWithIcon.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ViewModels\Commands\RelayParametrizedCommand.cs" />
+    <Compile Include="ViewModels\Commands\UnSelectAllCommand.cs" />
     <Compile Include="ViewModels\Commands\RelayParametlessCommand.cs" />
     <Compile Include="ViewModels\StatisticsViewModel.cs" />
     <Compile Include="ViewModels\BaseViewModel.cs" />
-    <Compile Include="ViewModels\Commands\BaseCommand.cs" />
+    <Compile Include="ViewModels\Commands\CommandWithViewModel.cs" />
     <Compile Include="ViewModels\Commands\GetSiblingsCommand.cs" />
-    <Compile Include="ViewModels\Commands\SaveToXMLCommand.cs" />
     <Compile Include="ViewModels\Commands\StatisticsLoadedCommand.cs" />
     <Compile Include="ViewModels\Commands\SwitchGraphCommand.cs" />
     <Compile Include="ViewModels\Commands\SwitchPageCommand.cs" />

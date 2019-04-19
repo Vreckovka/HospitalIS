@@ -17,7 +17,7 @@ namespace HospitalIS.ViewModels
     public class GraphsViewModel : BaseViewModel
     {
         public Dictionary<string, BaseGraphViewModel> Graphs { get; set; } = new Dictionary<string, BaseGraphViewModel>();
-        public SwitchGraphCommand SwitchGraphCommand { get; set; }
+        public SwitchGraphCommandWithViewModel SwitchGraphCommandWithViewModel { get; set; }
         public BaseGraphViewModel ActualGraphViewModel { get; set; }
 
         public CartesianChart Chart { get; set; }
@@ -25,7 +25,7 @@ namespace HospitalIS.ViewModels
         {
             Chart = chart;
 
-            SwitchGraphCommand = new SwitchGraphCommand(this);
+            SwitchGraphCommandWithViewModel = new SwitchGraphCommandWithViewModel(this);
 
             Graphs.Add("Weight", new WeightGraphViewModel());
             Graphs.Add("Height", new HeightGraphViewModel());

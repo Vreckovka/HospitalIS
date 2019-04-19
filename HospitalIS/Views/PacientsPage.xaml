@@ -21,7 +21,6 @@
         </Grid.ColumnDefinitions>
 
         <DataGrid ItemsSource="{Binding Pacients}" Name="ListViewPacients" AutoGenerateColumns="False" >
-
             <DataGrid.Columns>
                 <DataGridTextColumn Header="PID" Binding="{Binding PID}" Width="*"/>
                 <DataGridTextColumn Header="First name" Binding="{Binding FirstName}"  Width="*"/>

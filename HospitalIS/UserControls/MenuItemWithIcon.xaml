@@ -5,10 +5,9 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:HospitalIS.UserControls"
              mc:Ignorable="d" 
-             d:DesignHeight="100" d:DesignWidth="100" Background="Transparent">
+             Background="Transparent">
 
-
-    <Grid HorizontalAlignment="Left" >
+    <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="auto"/>
             <ColumnDefinition Width="*"/>
@@ -20,7 +19,6 @@
               Height="17" 
               Stretch="Fill" 
               Margin="0,5,5,5"
-              SnapsToDevicePixels="true"
               HorizontalAlignment="Left" 
               VerticalAlignment="Top"/>
 
@@ -28,6 +26,8 @@
                    Grid.Column="1" 
                    TextTrimming="CharacterEllipsis"
                    HorizontalAlignment="Right"
-                   VerticalAlignment="Top"/>
+                   VerticalAlignment="Top"
+                   />
     </Grid>
+
 </UserControl>

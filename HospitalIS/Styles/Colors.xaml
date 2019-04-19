@@ -12,16 +12,4 @@
     <SolidColorBrush x:Key="BackgroundBrush" >#f8f8f8</SolidColorBrush>
     <SolidColorBrush x:Key="GreenColorBrush"  Color="{DynamicResource GreenColor}"/>
 
-    <!--<LinearGradientBrush x:Key="BackgroudBrush" StartPoint="0,0" EndPoint="0,3">
-        <GradientStop Color="{DynamicResource BackgroudColor}" 
-                      Offset="0.23" />
-        <GradientStop Color="{DynamicResource BackgroudColor2}" Offset="0.5" />
-    </LinearGradientBrush>
-
-    <LinearGradientBrush x:Key="BackgroudPageBrush" StartPoint="0,0" EndPoint="0,3">
-        <GradientStop Color="{DynamicResource BackgroudColor}" 
-                      Offset="0.23" />
-        <GradientStop Color="{DynamicResource BackgroudColor2}" Offset="0.8" />
-    </LinearGradientBrush>-->
-
 </ResourceDictionary>

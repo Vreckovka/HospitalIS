@@ -15,13 +15,12 @@ namespace HospitalIS.ViewModels
     public class MainWindowViewModel : BaseViewModel
     {
         public ApplicationPage DisplayedPage { get; set; } = ApplicationPage.Pacients;
-        public ICommand SwitchPageCommand { get; set; }
+        public ICommand SwitchPageCommand { get; set; } 
+        public ICommand UnSelectAllCommand { get; set; }
         public MainWindowViewModel()
         {
-            SwitchPageCommand = new SwitchPageCommand(this);
-            //Pages.Add("Pacients", new PacientsPage());
-            //Pages.Add("Graphs", new GraphsPage());
-            //Pages.Add("Statistics", new StatisticsPage());
+            SwitchPageCommand = new SwitchPageCommandWithViewModel(this);
+            UnSelectAllCommand = new UnSelectAllCommand();
         }
     }
 }

@@ -31,7 +31,7 @@ namespace HospitalIS
 
             //Generate pacients
             //PacientGenerator pacientGenerator = new PacientGenerator();
-            //pacientGenerator.SerializePacients(XmlContext.XmlPath, pacientGenerator.CreatePacients(10000));
+            //pacientGenerator.Save(XmlContext.XmlPath, pacientGenerator.CreatePacients(10000));
 
             MainWindowViewModel = new MainWindowViewModel();
             DataContext = MainWindowViewModel;
@@ -41,7 +41,7 @@ namespace HospitalIS
         {
             //if (ListViewPageControl.Items.Count > 0)
             //{
-            //    MainWindowViewModel.SwitchPageCommand.Execute(ListViewPageControl.Items[0]);
+            //    MainWindowViewModel.SwitchPageCommandWithViewModel.Execute(ListViewPageControl.Items[0]);
             //    ((ListViewItem) ListViewPageControl.Items[0]).IconColor = true;
             //}             
         }

@@ -11,9 +11,9 @@ using HospitalIS.UserControls;
 
 namespace HospitalIS.ViewModels.Commands
 {
-    public class SwitchPageCommand : BaseCommand
+    public class SwitchPageCommandWithViewModel : CommandWithViewModel
     {
-        public SwitchPageCommand(BaseViewModel baseViewModel) : base(baseViewModel)
+        public SwitchPageCommandWithViewModel(BaseViewModel baseViewModel) : base(baseViewModel)
         {
 
         }
@@ -28,7 +28,7 @@ namespace HospitalIS.ViewModels.Commands
             switch ((ApplicationPage)((MenuItemWithIcon)parameter).MenuEnum)
             {
                 case ApplicationPage.Pacients:
-                    ((MainWindowViewModel) BaseViewModel).DisplayedPage = ApplicationPage.Pacients;
+                    ((MainWindowViewModel)BaseViewModel).DisplayedPage = ApplicationPage.Pacients;
                     break;
                 case ApplicationPage.Graphs:
                     ((MainWindowViewModel)BaseViewModel).DisplayedPage = ApplicationPage.Graphs;
@@ -40,6 +40,12 @@ namespace HospitalIS.ViewModels.Commands
                     throw new ArgumentOutOfRangeException(nameof(parameter), parameter, null);
             }
 
+            ((MenuItemWithIcon)parameter).IsSelected = true;
+        }
+
+        private void UnSelectAll(MainWindowViewModel viewModel)
+        {
+           
         }
 
         public override event EventHandler CanExecuteChanged;

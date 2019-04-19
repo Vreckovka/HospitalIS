@@ -7,11 +7,11 @@ using System.Windows.Input;
 
 namespace HospitalIS.ViewModels.Commands
 {
-    public abstract class BaseCommand : ICommand
+    public abstract class CommandWithViewModel : ICommand
     {
         protected BaseViewModel BaseViewModel { get; set; }
 
-        public BaseCommand(BaseViewModel baseViewModel)
+        public CommandWithViewModel(BaseViewModel baseViewModel)
         {
             BaseViewModel = baseViewModel;
         }

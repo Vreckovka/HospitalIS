@@ -50,86 +50,16 @@
             <Setter.Value>
                 <!-- Trun off default selection-->
                 <ControlTemplate TargetType="{x:Type ListViewItem}">
-
                     <ContentPresenter 
-                            Grid.Column="1"
-                            HorizontalAlignment="Center" 
+                            HorizontalAlignment="Stretch" 
                             SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" 
                             VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
                             Margin="{TemplateBinding Margin}"
                             />
-
-
-                    <!--<ControlTemplate.Triggers>
-                        <Trigger Property="IsEnabled" Value="false">
-                            <Setter Property="Foreground"
-                                    Value="{DynamicResource {x:Static SystemColors.GrayTextBrushKey}}"/>
-                        </Trigger>
-                        <MultiDataTrigger>
-                            <MultiDataTrigger.Conditions>
-                                <Condition Binding="{Binding RelativeSource={RelativeSource self}, Path=IsMouseOver}" Value="True"  />
-                                <Condition Binding="{Binding RelativeSource={RelativeSource self}, Path=IsSelected}" Value="False" />
-                            </MultiDataTrigger.Conditions>
-                            <MultiDataTrigger.EnterActions>
-                                <RemoveStoryboard BeginStoryboardName="B"/>
-                                <BeginStoryboard>
-                                    <Storyboard>
-                                        <ColorAnimation Storyboard.TargetProperty="Background.Color" To="#15ffffff" Duration="0:0:.25"/>
-                                    </Storyboard>
-                                </BeginStoryboard>
-                            </MultiDataTrigger.EnterActions>
-                            <MultiDataTrigger.ExitActions>
-                                <BeginStoryboard>
-                                    <Storyboard>
-                                        <ColorAnimation Storyboard.TargetProperty="Background.Color" To="Transparent" Duration="0:0:.25"/>
-                                    </Storyboard>
-                                </BeginStoryboard>
-                            </MultiDataTrigger.ExitActions>
-                        </MultiDataTrigger>
-
-                        <Trigger Property="IsSelected" Value="True">
-                            <Trigger.EnterActions>
-                                <BeginStoryboard x:Name="A">
-                                    <Storyboard>
-                                        <ColorAnimation Storyboard.TargetProperty="Background.Color" To="#15ffffff" Duration="0:0:0:0.2" />
-                                        <ColorAnimation Storyboard.TargetProperty="Foreground.Color" To="#c9fdff" Duration="0:0:0:0.2" />
-                                        
-                                        -->
-                    <!--<ColorAnimation Storyboard.TargetName="ImageIcon" 
-                                                        Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)" 
-                                                        To="#c9fdff" 
-                                                        Duration="0:0:0:0.2"/>-->
-                    <!--
-                                    </Storyboard>
-                                </BeginStoryboard>
-                            </Trigger.EnterActions>
-
-                            <Trigger.ExitActions>
-                                <RemoveStoryboard BeginStoryboardName="A"/>
-                                <BeginStoryboard x:Name="B">
-                                    <Storyboard>
-                                        <ColorAnimation Storyboard.TargetProperty="Background.Color" To="Transparent" Duration="0:0:0:.2" />
-                                    </Storyboard>
-                                </BeginStoryboard>
-                            </Trigger.ExitActions>
-                        </Trigger>
-                    </ControlTemplate.Triggers>-->
                 </ControlTemplate>
             </Setter.Value>
         </Setter>
     </Style>
-
-
-
-
-
-
-
-
-
-
-
-
 
 
     <Style x:Key="ListViewItem_MenuStyleWithoutIcon" TargetType="{x:Type ListViewItem}">

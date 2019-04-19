@@ -8,7 +8,7 @@ using System.Windows.Input;
 
 namespace HospitalIS.ViewModels.Commands
 {
-    public class SwitchStatisticsCommand : BaseCommand
+    public class SwitchStatisticsCommandWithViewModel : CommandWithViewModel
     {
         public override bool CanExecute(object parameter)
         {
@@ -29,7 +29,7 @@ namespace HospitalIS.ViewModels.Commands
 
         public override event EventHandler CanExecuteChanged;
 
-        public SwitchStatisticsCommand(BaseViewModel baseViewModel) : base(baseViewModel)
+        public SwitchStatisticsCommandWithViewModel(BaseViewModel baseViewModel) : base(baseViewModel)
         {
         }
     }

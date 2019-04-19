@@ -33,7 +33,7 @@ namespace HospitalIS.Views
         {
             if (ListViewPageControl.Items.Count > 0)
             {
-                BaseStatisticsViewModel.SwitchStatisticsCommand.Execute(ListViewPageControl.Items[0]);
+                BaseStatisticsViewModel.SwitchStatisticsCommandWithViewModel.Execute(ListViewPageControl.Items[0]);
                 ((ListViewItem)ListViewPageControl.Items[0]).IsSelected = true;
             }
         }

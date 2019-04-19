@@ -9,10 +9,10 @@ using HospitalIS.ViewModels.GraphsViewModels;
 
 namespace HospitalIS.ViewModels.Commands
 {
-   public class SwitchGraphCommand : BaseCommand
+   public class SwitchGraphCommandWithViewModel : CommandWithViewModel
     {
 
-        public SwitchGraphCommand(BaseViewModel baseViewModel) : base(baseViewModel)
+        public SwitchGraphCommandWithViewModel(BaseViewModel baseViewModel) : base(baseViewModel)
         {
 
         }

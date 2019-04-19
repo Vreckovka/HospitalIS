@@ -9,9 +9,9 @@ using HospitalIS.Other;
 
 namespace HospitalIS.ViewModels.Commands
 {
-    public class GetSiblingsCommand : BaseCommand
+    public class GetSiblingsCommandWithViewModel : CommandWithViewModel
     {
-        public GetSiblingsCommand(BaseViewModel baseViewModel) : base(baseViewModel)
+        public GetSiblingsCommandWithViewModel(BaseViewModel baseViewModel) : base(baseViewModel)
         {
             BaseViewModel = baseViewModel;
         }

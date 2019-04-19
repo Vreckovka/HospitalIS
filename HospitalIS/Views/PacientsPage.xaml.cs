@@ -21,10 +21,11 @@ namespace HospitalIS.Views
     /// </summary>
     public partial class PacientsPage : Page
     {
-        public PacientViewModel PacientViewModel { get; set; } = new PacientViewModel();
+        public PacientViewModel PacientViewModel { get; set; } 
         public PacientsPage()
         {
             InitializeComponent();
+            PacientViewModel = new PacientViewModel();
             DataContext = PacientViewModel;
         }
     }

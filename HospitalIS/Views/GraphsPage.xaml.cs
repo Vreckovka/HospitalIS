@@ -35,7 +35,7 @@ namespace HospitalIS.Views
         {
             if (ListViewPageControl.Items.Count > 0 && ListViewPageControl.SelectedItem == null)
             {
-                GraphsViewModel.SwitchGraphCommand.Execute(ListViewPageControl.Items[0]);
+                GraphsViewModel.SwitchGraphCommandWithViewModel.Execute(ListViewPageControl.Items[0]);
                 ((ListViewItem)ListViewPageControl.Items[0]).IsSelected = true;
             }
         }
