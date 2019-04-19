@@ -39,7 +39,7 @@
                     </ie:InvokeCommandAction>
                 </ie:EventTrigger>
                 <ie:EventTrigger EventName="CellEditEnding">
-                    <ie:InvokeCommandAction Command="{Binding SaveToXMLCommand}"/>
+                    <ie:InvokeCommandAction Command="{Binding SaveCommand}"/>
                 </ie:EventTrigger>
             </ie:Interaction.Triggers>
             

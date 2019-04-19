@@ -26,18 +26,16 @@
             <ColumnDefinition Width="auto"/>
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
-        <ListView Name="ListViewPageControl" Style="{StaticResource ListView_MenuStyle}" 
-                  ItemContainerStyle="{StaticResource ListViewItem_MenuStyle}"
-                  ItemsSource="{Binding Source={bidingExtention:EnumBindingSource {x:Type models:ApplicationPage}}}"
+        <ListView Style="{StaticResource ListView_MenuStyle}" 
+                  ItemContainerStyle="{StaticResource ListViewItem_MenuStyleWithIcon}"
+                  ItemsSource="{Binding Source={bidingExtention:EnumBindingSourceExtensionWithIcon
+                                {x:Type models:ApplicationPages}}}"
                   >
             <i:Interaction.Triggers>
                 <i:EventTrigger EventName="SelectionChanged">
-                    <i:InvokeCommandAction Command="{Binding UnSelectAllCommand}" 
-                                           CommandParameter="{Binding ElementName=ListViewPageControl}">
-                    </i:InvokeCommandAction>
-
                     <i:InvokeCommandAction Command="{Binding SwitchPageCommand}" 
-                                           CommandParameter="{Binding ElementName=ListViewPageControl, 
+                                           CommandParameter="{Binding 
+                                           RelativeSource={RelativeSource AncestorType=ListView,Mode=FindAncestor}, 
                                            Path=SelectedItem}">
                     </i:InvokeCommandAction>
 
@@ -45,7 +43,7 @@
             </i:Interaction.Triggers>
         </ListView>
 
-        <Frame x:Name="FramePage" Grid.Column="1" 
+        <Frame Grid.Column="1" 
                Content="{Binding DisplayedPage,
                Converter={converters:ApplicationPageConverter}}"
                NavigationUIVisibility="Hidden"/>

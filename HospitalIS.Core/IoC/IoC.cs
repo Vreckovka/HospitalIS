@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Autofac;
+using HospitalIS.Core.DataContexts;
 using HospitalIS.DataContexts;
 
 namespace HospitalIS.Core.IoC
@@ -15,7 +16,7 @@ namespace HospitalIS.Core.IoC
         {
             var builder = new ContainerBuilder();
 
-            builder.RegisterType<XmlContext>().As<IDataContext>();
+            builder.RegisterType<XmlContext>().As<DataContext>().SingleInstance();
 
             Container =  builder.Build();
         }

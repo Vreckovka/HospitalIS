@@ -1,25 +1,18 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.IO;
 using System.Xml.Serialization;
 using HospitalIS.Core.Models;
 
-namespace HospitalIS.DataContexts
+namespace HospitalIS.Core.DataContexts
 {
-    
-    public class XmlContext : IDataContext
+    public class XmlContext : DataContext
     {
-        public static Pacients Pacients { get; set; }
         public static string XmlPath { get; } = "..\\..\\pacients.xml";
         public XmlContext()
         {
             Load();
         }
 
-        public void Save()
+        public override void Save()
         {
             using (FileStream stream = new FileStream(XmlPath, FileMode.Create))
             {
@@ -27,7 +20,7 @@ namespace HospitalIS.DataContexts
                 xmlSerializer.Serialize(stream, Pacients);
             }
         }
-        public void Load()
+        public override void Load()
         {
             if (File.Exists(XmlPath))
                 using (FileStream stream = new FileStream(XmlPath, FileMode.Open))

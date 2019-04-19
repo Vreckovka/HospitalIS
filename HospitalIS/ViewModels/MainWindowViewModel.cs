@@ -8,13 +8,11 @@ namespace HospitalIS.ViewModels
 {
     public class MainWindowViewModel : BaseViewModel
     {
-        public ApplicationPage DisplayedPage { get; set; } = ApplicationPage.Pacients;
+        public ApplicationPages DisplayedPage { get; set; } = ApplicationPages.Pacients;
         public ICommand SwitchPageCommand { get; set; } 
-        public ICommand UnSelectAllCommand { get; set; }
         public MainWindowViewModel()
         {
-            SwitchPageCommand = new SwitchPageCommandWithViewModel(this);
-            UnSelectAllCommand = new UnSelectAllCommand();
+            SwitchPageCommand = new SwitchApplicationPageCommand(this);
         }
     }
 }

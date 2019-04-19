@@ -100,7 +100,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="BindingSourceExtension\EnumBindingSourceExtension.cs" />
+    <Compile Include="BindingSourceExtension\EnumBindingSourceExtensionWithIcon.cs" />
+    <Compile Include="BindingSourceExtension\EnumBindingSourceExtensionWithoutIcon.cs" />
+    <Compile Include="Converters\GraphPageConverter.cs" />
     <Compile Include="Converters\ApplicationPageConverter.cs" />
     <Compile Include="Converters\BaseLastNameConverter.cs" />
     <Compile Include="Converters\BirthDateConverter.cs" />
@@ -112,9 +114,13 @@
     <Compile Include="UserControls\MenuItemWithIcon.xaml.cs">
       <DependentUpon>MenuItemWithIcon.xaml</DependentUpon>
     </Compile>
-    <Compile Include="ViewModels\Commands\SwitchPageCommand.cs" />
-    <Compile Include="ViewModels\Commands\UnSelectAllCommand.cs" />
+    <Compile Include="ViewModels\Commands\SwitchGraphCommand.cs" />
+    <Compile Include="ViewModels\Commands\SwitchApplicationPageCommand.cs" />
+    <Compile Include="ViewModels\GraphsViewModel.cs" />
     <Compile Include="ViewModels\MainWindowViewModel.cs" />
+    <Compile Include="Views\GraphPages\GraphPage.xaml.cs">
+      <DependentUpon>GraphPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\StatisticsPages\BaseStatisticsPage.cs" />
     <Compile Include="Views\GraphsPage.xaml.cs">
       <DependentUpon>GraphsPage.xaml</DependentUpon>
@@ -168,10 +174,6 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Styles\MenuItemWIthIconStyle.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="Styles\ScrollBarStyles.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -181,6 +183,10 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="UserControls\MenuItemWithIcon.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\GraphPages\GraphPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

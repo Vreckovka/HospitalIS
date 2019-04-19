@@ -8,10 +8,11 @@ using System.Windows.Data;
 using System.Windows.Markup;
 using HospitalIS.Core.Models;
 using HospitalIS.Views;
+using HospitalIS.Views.GraphPages;
 
 namespace HospitalIS.Converters
 {
-    public class ApplicationPageConverter : MarkupExtension, IValueConverter
+    public class GraphPageConverter : MarkupExtension, IValueConverter
     {
         public override object ProvideValue(IServiceProvider serviceProvider)
         {
@@ -21,14 +22,14 @@ namespace HospitalIS.Converters
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {
             if (value != null)
-                switch ((ApplicationPages)value)
+                switch ((GraphPages)value)
                 {
-                    case ApplicationPages.Pacients:
-                        return new PacientsPage();
-                    case ApplicationPages.Graphs:
-                        return new GraphsPage();
-                    case ApplicationPages.Statistics:
-                        return new StatisticsPage();
+                    case GraphPages.Age:
+                        return new GraphPage(6, "Age range", 10,10,"Age");
+                    case GraphPages.Height:
+                        return new GraphPage(6, "Height range", 5, 170, "Height");
+                    case GraphPages.Weight:
+                        return new GraphPage(6, "Weight range", 10,60, "Weight");
                     default:
                         throw new ArgumentOutOfRangeException(nameof(value), value, null);
                 }

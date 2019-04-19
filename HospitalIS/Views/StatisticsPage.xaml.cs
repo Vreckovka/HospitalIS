@@ -29,14 +29,5 @@ namespace HospitalIS.Views
             BaseStatisticsViewModel = new StatisticsViewModel();
             DataContext = BaseStatisticsViewModel;
         }
-
-        private void Page_Loaded(object sender, RoutedEventArgs e)
-        {
-            if (ListViewPageControl.Items.Count > 0)
-            {
-                BaseStatisticsViewModel.SwitchStatisticsCommandWithViewModel.Execute(ListViewPageControl.Items[0]);
-                ((ListViewItem)ListViewPageControl.Items[0]).IsSelected = true;
-            }
-        }
     }
 }

@@ -14,11 +14,12 @@ using HospitalIS.UserControls;
 
 namespace HospitalIS.BindingSourceExtension
 {
-    public class EnumBindingSourceExtension : MarkupExtension
+    public class EnumBindingSourceExtensionWithIcon : MarkupExtension
     {
-        public EnumBindingSourceExtension(Type enumType)
+        Type _enumType;
+        public EnumBindingSourceExtensionWithIcon(Type enumType)
         {
-
+            _enumType = enumType;
         }
 
         /// <summary>
@@ -29,12 +30,13 @@ namespace HospitalIS.BindingSourceExtension
         public override object ProvideValue(IServiceProvider serviceProvider)
         {
             var list = new List<MenuItemWithIcon>();
-
-            foreach (ApplicationPage enumVal in (ApplicationPage[])Enum.GetValues(typeof(ApplicationPage)))
+            
+            //Gets enum type with reflection
+            var type = _enumType.GetTypeInfo();
+            foreach (Enum enumVal in Enum.GetValues(type))
             {
                 list.Add(CreateMenuItem(enumVal));
             }
-
             return list;
         }
 

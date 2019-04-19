@@ -8,11 +8,13 @@ namespace HospitalIS.Core.ViewModels
     {
         //public Page DisplayedPage { get; set; }
         //public Dictionary<string, Page> Pages { get; set; } = new Dictionary<string, Page>();
-        public SwitchStatisticsCommandWithViewModel SwitchStatisticsCommandWithViewModel { get; set; }
+        //public SwitchStatisticsCommandWithViewModel SwitchStatisticsCommandWithViewModel { get; set; }
 
         public StatisticsViewModel()
         {
-            SwitchStatisticsCommandWithViewModel = new SwitchStatisticsCommandWithViewModel(this);
+            //TODO: StatisticsViewModel
+
+          //  SwitchStatisticsCommandWithViewModel = new SwitchStatisticsCommandWithViewModel(this);
 
             //Pages.Add("Heavier people\nthen avrage", new AvrageHeightStatisticsPage());
         }  

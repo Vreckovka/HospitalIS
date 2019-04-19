@@ -23,7 +23,6 @@ namespace HospitalIS
     /// </summary>
     public partial class MainWindow : Window
     {
-        public MainWindowViewModel MainWindowViewModel { get; set; }
         public MainWindow()
         {
             InitializeComponent();
@@ -32,17 +31,16 @@ namespace HospitalIS
             //PacientGenerator pacientGenerator = new PacientGenerator();
             //pacientGenerator.Save(XmlContext.XmlPath, pacientGenerator.CreatePacients(10000));
 
-            MainWindowViewModel = new MainWindowViewModel();
-            DataContext = MainWindowViewModel;
+            DataContext = new MainWindowViewModel();
         }
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
             //if (ListViewPageControl.Items.Count > 0)
             //{
-            //    MainWindowViewModel.SwitchPageCommandWithViewModel.Execute(ListViewPageControl.Items[0]);
-            //    ((ListViewItem) ListViewPageControl.Items[0]).IconColor = true;
-            //}             
+            //    MainWindowViewModel.SwitchApplicationPageCommandWithViewModel.Execute(ListViewPageControl.Items[0]);
+            //    ((ListViewItem)ListViewPageControl.Items[0]).IconColor = true;
+            //}
         }
     }
 }

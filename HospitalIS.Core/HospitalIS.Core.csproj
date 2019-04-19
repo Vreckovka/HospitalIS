@@ -37,11 +37,15 @@
     <Reference Include="Autofac, Version=4.9.2.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
       <HintPath>..\packages\Autofac.4.9.2\lib\net45\Autofac.dll</HintPath>
     </Reference>
+    <Reference Include="LiveCharts, Version=0.9.7.0, Culture=neutral, PublicKeyToken=0bc1f845d1ebb8df, processorArchitecture=MSIL">
+      <HintPath>..\packages\LiveCharts.0.9.7\lib\net45\LiveCharts.dll</HintPath>
+    </Reference>
     <Reference Include="PropertyChanged, Version=2.6.1.0, Culture=neutral, PublicKeyToken=ee3ee20bcf148ddd, processorArchitecture=MSIL">
       <HintPath>..\packages\PropertyChanged.Fody.2.6.1\lib\net452\PropertyChanged.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Xaml" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -51,10 +55,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Attributes\IconStyleKey.cs" />
+    <Compile Include="Converters\EnumDescriptionConverter.cs" />
+    <Compile Include="DataContexts\DataContext.cs" />
     <Compile Include="DataContexts\IDataContext.cs" />
     <Compile Include="DataContexts\XmlContext.cs" />
     <Compile Include="IoC\IoC.cs" />
-    <Compile Include="Models\ApplicationPage.cs" />
+    <Compile Include="Models\ApplicationPages.cs" />
+    <Compile Include="Models\GraphPages.cs" />
     <Compile Include="Models\Pacient.cs" />
     <Compile Include="Models\Pacients.cs" />
     <Compile Include="Other\PacientGenerator.cs" />
@@ -65,14 +72,7 @@
     <Compile Include="ViewModels\Commands\GetSiblingsCommand.cs" />
     <Compile Include="ViewModels\Commands\RelayParametlessCommand.cs" />
     <Compile Include="ViewModels\Commands\RelayParametrizedCommand.cs" />
-    <Compile Include="ViewModels\Commands\StatisticsLoadedCommand.cs" />
-    <Compile Include="ViewModels\Commands\SwitchGraphCommand.cs" />
-    <Compile Include="ViewModels\Commands\SwitchStatisticsCommand.cs" />
-    <Compile Include="ViewModels\GraphsViewModel.cs" />
-    <Compile Include="ViewModels\GraphsViewModels\AgeGraphViewModel.cs" />
     <Compile Include="ViewModels\GraphsViewModels\BaseGraphViewModel.cs" />
-    <Compile Include="ViewModels\GraphsViewModels\HeightGraphViewModel.cs" />
-    <Compile Include="ViewModels\GraphsViewModels\WeightGraphViewModel.cs" />
     <Compile Include="ViewModels\PacientViewModel.cs" />
     <Compile Include="ViewModels\StatisticsViewModel.cs" />
     <Compile Include="ViewModels\StatisticsVIewModels\AvrageHeightStatisticsViewModel.cs" />

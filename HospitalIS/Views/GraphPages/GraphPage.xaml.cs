@@ -12,24 +12,19 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using HospitalIS.Core.IoC;
-using HospitalIS.Core.ViewModels;
-using HospitalIS.DataContexts;
-using HospitalIS.ViewModels;
-using Autofac;
-using HospitalIS.Core.DataContexts;
+using HospitalIS.Core.ViewModels.GraphsViewModels;
 
-namespace HospitalIS.Views
+namespace HospitalIS.Views.GraphPages
 {
     /// <summary>
-    /// Interaction logic for PacientsPage.xaml
+    /// Interaction logic for AgePage.xaml
     /// </summary>
-    public partial class PacientsPage : Page
+    public partial class GraphPage : Page
     {
-        public PacientsPage()
+        public GraphPage(int labelCout, string xAxisTitle,int gap, int minValue, string propName)
         {
             InitializeComponent();
-            DataContext = new PacientViewModel(IoC.Container.Resolve<DataContext>()); 
+            DataContext = new BaseGraphViewModel(labelCout, xAxisTitle, gap, minValue, propName);
         }
     }
 }

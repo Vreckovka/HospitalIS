@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Autofac;
+using HospitalIS.Core.DataContexts;
+using HospitalIS.Core.IoC;
 using HospitalIS.Core.Models;
 using HospitalIS.DataContexts;
 
@@ -15,10 +18,12 @@ namespace HospitalIS.ViewModels.StatisticsVIewModels
         public double AvrageHeight { get; set; }
         public override void CalculateStatistics()
         {
-            if (XmlContext.Pacients.Count != 0)
+            var pacients = IoC.Container.Resolve<DataContext>().Pacients;
+
+            if (pacients.Count != 0)
             {
-                AvrageWeight = (from y in XmlContext.Pacients select y).Average(y => y.Weight);
-                Pacients = (from x in XmlContext.Pacients where x.Weight > AvrageWeight select x).ToList();
+                AvrageWeight = (from y in pacients select y).Average(y => y.Weight);
+                Pacients = (from x in pacients where x.Weight > AvrageWeight select x).ToList();
                 AvrageHeight = (from y in Pacients select y).Average(y => y.Height);
             }
         }

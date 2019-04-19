@@ -7,6 +7,9 @@
       xmlns:liveChart="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf"
       xmlns:svgc="http://sharpvectors.codeplex.com/svgc/"
       xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+      xmlns:bindingSourceExtension="clr-namespace:HospitalIS.BindingSourceExtension"
+      xmlns:models="clr-namespace:HospitalIS.Core.Models;assembly=HospitalIS.Core"
+      xmlns:converters="clr-namespace:HospitalIS.Converters"
       mc:Ignorable="d" 
       d:DesignHeight="450" 
       d:DesignWidth="800"
@@ -16,23 +19,22 @@
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="auto"/>
             <ColumnDefinition Width="*"/>
-
         </Grid.ColumnDefinitions>
 
-        <ListView Name="ListViewPageControl" 
-                  Style="{StaticResource ListView_MenuStyle}" 
-                  ItemContainerStyle="{StaticResource ListViewItem_MenuStyleWithoutIcon}">
+        <ListView Style="{StaticResource ListView_MenuStyle}" 
+                  ItemContainerStyle="{StaticResource ListViewItem_MenuStyleWithoutIcon}"
+                  ItemsSource="{Binding Source={bindingSourceExtension:EnumBindingSourceExtensionWithoutIcon 
+                  {x:Type models:GraphPages}}}">
+
             <i:Interaction.Triggers>
                 <i:EventTrigger EventName="SelectionChanged">
                     <i:InvokeCommandAction Command="{Binding SwitchGraphCommand}" 
-                                           CommandParameter="{Binding ElementName=ListViewPageControl, Path=SelectedItem}">
+                                           CommandParameter="{Binding RelativeSource={RelativeSource AncestorType=ListView, Mode=FindAncestor},
+                                           Path=SelectedItem}">
                     </i:InvokeCommandAction>
+
                 </i:EventTrigger>
             </i:Interaction.Triggers>
-
-            <ListViewItem Content="Weight" />
-            <ListViewItem Content="Height" />
-            <ListViewItem Content="Age" />
         </ListView>
 
         <Grid Grid.Column="1">
@@ -43,41 +45,10 @@
             Margin="10" >
             </svgc:SvgViewbox>
 
-            <liveChart:CartesianChart            
-                Background="Transparent"
-                Name="Chart"
-                DataContext="{Binding ActualGraphViewModel}"
-                >
-                <liveChart:CartesianChart.Series>
-                    <liveChart:ColumnSeries
-                        Title="Number of people in range"
-                        Values="{Binding ColumnValues}" 
-                        Fill="{StaticResource DefaultBlueBrush}">
-                    </liveChart:ColumnSeries>
-                </liveChart:CartesianChart.Series>
-
-                <liveChart:CartesianChart.AxisY >
-                    <liveChart:Axis  Title="{Binding YAxisTitle}" 
-                                     Foreground="{StaticResource DefaultBlueBrush}" 
-                                     FontSize="15" 
-                                     FontFamily="Calibri">
-                        <liveChart:Axis.Separator >
-                            <liveChart:Separator Stroke="#25000000"/>
-                        </liveChart:Axis.Separator>
-                    </liveChart:Axis>
-                </liveChart:CartesianChart.AxisY>
-
-                <liveChart:CartesianChart.AxisX >
-                    <liveChart:Axis Title="{Binding XAxisTitle}" 
-                                    Labels="{Binding ColumnLabels}" 
-                                    Foreground="{StaticResource DefaultBlueBrush}" 
-                                    FontSize="15" FontFamily="Calibri">
-                        <liveChart:Axis.Separator >
-                            <liveChart:Separator Stroke="#25000000"/>
-                        </liveChart:Axis.Separator>
-                    </liveChart:Axis>
-                </liveChart:CartesianChart.AxisX>
-            </liveChart:CartesianChart>
+            <Frame Content="{Binding DisplayedPage,
+                   Converter={converters:GraphPageConverter}}"
+                   NavigationUIVisibility="Hidden"/>
+           
         </Grid>
     </Grid>
 </Page>

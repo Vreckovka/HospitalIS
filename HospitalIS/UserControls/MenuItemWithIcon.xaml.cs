@@ -20,7 +20,7 @@ namespace HospitalIS.UserControls
     /// Interaction logic for MenuItem.xaml
     /// </summary>
     [AddINotifyPropertyChangedInterface]
-    public partial class MenuItemWithIcon : UserControl
+    public partial class MenuItemWithIcon : ListViewItem
     {
         private static readonly DependencyProperty IconProperty =
             DependencyProperty.Register("IconProperty", typeof(Path), typeof(MenuItemWithIcon));
@@ -55,14 +55,6 @@ namespace HospitalIS.UserControls
             set{ this.SetValue(MenuEnumProperty, value); }
         }
 
-
-        public bool IsSelected
-        {
-            get { return (bool)this.GetValue(IsSelectedProperty); }
-            set { this.SetValue(IsSelectedProperty, value); }
-        }
-        public static readonly DependencyProperty IsSelectedProperty = DependencyProperty.RegisterAttached(
-            "IsSelected", typeof(bool), typeof(MenuItemWithIcon), new PropertyMetadata(false));
 
         public SolidColorBrush IconColor
         {

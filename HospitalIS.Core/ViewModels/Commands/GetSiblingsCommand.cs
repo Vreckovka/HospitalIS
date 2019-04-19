@@ -1,14 +1,16 @@
 ﻿using System;
 using System.Linq;
+using Autofac;
+using HospitalIS.Core.DataContexts;
 using HospitalIS.Core.Models;
 using HospitalIS.Core.Other;
 using HospitalIS.ViewModels.Commands;
 
 namespace HospitalIS.Core.ViewModels.Commands
 {
-    public class GetSiblingsCommandWithViewModel : CommandWithViewModel
+    public class GetSiblingsCommand : CommandWithViewModel
     {
-        public GetSiblingsCommandWithViewModel(BaseViewModel baseViewModel) : base(baseViewModel)
+        public GetSiblingsCommand(BaseViewModel baseViewModel) : base(baseViewModel)
         {
             BaseViewModel = baseViewModel;
         }
@@ -27,8 +29,10 @@ namespace HospitalIS.Core.ViewModels.Commands
 
                 var lastName = pacient.LastName.RemovePostfixes(postfixes);
 
-                var model = ((PacientViewModel)BaseViewModel);
-                model.ActualPacientSiblings = (from x in model.Pacients
+                var pacients = IoC.IoC.Container.Resolve<DataContext>().Pacients;
+
+                ((PacientViewModel)BaseViewModel).ActualPacientSiblings = 
+                                               (from x in pacients
                                                where x.LastName.RemovePostfixes(postfixes).GetLvenshteinDistance(lastName) <= 1
                                                where x.PID != pacient.PID
                                                select x).ToList();

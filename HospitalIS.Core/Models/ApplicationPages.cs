@@ -3,7 +3,7 @@ using HospitalIS.Core.Attributes;
 
 namespace HospitalIS.Core.Models
 {
-    public enum ApplicationPage
+    public enum ApplicationPages
     {
         [IconStyleKey("UserIcon")]
         [Description("Pacients")]
