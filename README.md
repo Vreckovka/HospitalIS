@@ -1,7 +1,7 @@
 # HospitalIS
 Example of Hospital Information System
 
-WPF application using MVVM desing partern
+WPF application using MVVM desing partern and dependency injection
 
 Used NuGets:
 
